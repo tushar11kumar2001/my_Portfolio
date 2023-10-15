@@ -1,0 +1,295 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+:root{
+    --red: #ff2e2e;
+}
+.mainframe{
+    width: 100wh;
+    overflow-x: hidden;
+}
+
+.container{
+    width: 1200px;
+    display: flex;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    padding: 4px; 
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 300;
+    font-size: 25px;
+}
+
+.hypertext{
+    text-decoration: none;
+    color: black;
+    margin-left: 20px;
+    cursor: pointer;
+    transition-property: all;
+    transition-duration: 0.8s;
+    transition-timing-function: linear;
+}
+
+.hypertext:hover {
+   font-weight: bold;
+}
+
+.name h2{
+    display: inline;
+}
+
+.name{
+    font-family: 'Abril Fatface', cursive;
+    -webkit-text-stroke: 2px black;
+    color: white;
+}
+
+.hero-section{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 200px;
+    gap: 100px;
+}
+
+.faddedtext{
+    position: absolute;
+    top: 443px;
+    left: -30px;
+    user-select: none;
+    font-size: 100px;
+    color: rgba(128, 128, 128, 0.53);
+}
+
+.left{
+    width: 40%;
+    color: rgb(53, 27, 182);
+    font-size: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+}
+
+.rigth{
+    padding: 40px;
+    box-shadow: 5px 5px 10px 0px black;
+    animation: imge 10s linear 0s infinite alternate ;
+}
+
+@keyframes imge {
+    
+    0%
+    {
+        transform: scale(1);
+    }
+    50%
+    {
+        transform: scale(1.2);
+    }
+    100%
+    {
+        transform: scale(1);
+    }
+}
+
+.p1{
+    color: black;
+    font-size: 20px;
+}
+
+.project{
+    width: 100%;
+   background-color: rgba(128, 128, 128, 0.53);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.project_title{  
+    padding: 10px;
+    font-size: 100px;
+    color: #ff2e2e;
+    margin-bottom: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.cards{
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 100px;
+}
+
+.card1{
+    width: 90%;
+    height: 400px;
+    color: white;
+    position: relative;
+    z-index: 1;
+    box-shadow: 10px 10px 70px 10px black;
+}
+
+.card1::after{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-color: #262626; 
+    opacity: 0.7;
+    z-index: -1;
+}
+
+.card1::before{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    transform: scaleX(0);
+    transform-origin: left;
+    background-color:   #00001a;
+    transition-property: all;
+    transition-duration: 1.5s;
+    transition-timing-function: linear;
+    opacity: 0.5;
+}
+
+.card1:hover::before{
+    transform: scaleX(1);
+}
+
+.position{
+    position: absolute;
+}
+
+.number{
+    top: -25px;
+    right:-25px;
+    font-size: 150px;
+    margin: 0;
+    padding: 0;
+    font-weight: 650;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    z-index: 10;
+    display: none;
+}
+
+.card1:hover .number{
+    display: block;
+}
+
+.subheading{
+    margin-bottom: 10px;
+    font-size: 80px;
+    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.detail{
+    font-family: 'Roboto Mono', monospace;
+    font-size: larger;
+}
+
+.card1_heading{
+    left: 100px;
+    top: 130px;
+    width: 60%;
+    z-index: 10;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+}
+
+.card1:hover .card1_heading{
+    transform: scale(1.1);
+}
+
+.shift{
+    left: 120px;
+}
+
+.num{
+    top: 0;
+    left: 0;
+}
+
+.heading_shift{
+    left: 400px;
+    top: 130px;
+}
+
+.bg1{
+    background-image: url("a.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.bg2{
+    background-image: url("my_gallary_bg.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.bg3{
+    background-image: url("parallax_bg.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.btn{
+    margin-top: 20px;
+    padding: 5px 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    /* border-radius: 5px; */
+    border: 1px solid black;
+    background-color: var(--red);
+    position: relative;
+    color: white;
+    z-index: 1;
+}
+
+.btn::before{
+    content: "";
+    position: absolute;
+    background-color: #000;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    /* border-radius: 5px; */
+    /* border-radius: 5px; */
+    transform-origin: left;
+    transform: scaleX(0);
+
+    transition-duration: 0.4s;
+    transition-property: all;
+    transition-timing-function: linear;
+}
+
+.btn:hover::before {
+    transform: scaleX(1);
+}
